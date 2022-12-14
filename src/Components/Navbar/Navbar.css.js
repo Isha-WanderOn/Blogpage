@@ -8,15 +8,25 @@ const NavbarContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 675px) {
+  /* Mobile*/
+  @media (min-width: 480px) {
     height: 12.86vh;
   }
+  /*1024*/
 `;
 const Navbarlogo = styled.img`
   height: 13.04vh;
   display: flex;
   float: left;
   margin-left: 4.8vw;
+  @media (max-width: 480px) {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 8.04vh;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
 `;
 const NavbarLinkContainer = styled.div`
   flex: 50%;
@@ -29,7 +39,7 @@ const NavbarLink = styled(Link)`
   font-size: 1.38vw;
   text-decoration: none;
   margin: 1.9vw;
-  @media (max-width: 675px) {
+  @media (max-width: 480px) {
     display: none;
   }
 `;
@@ -56,8 +66,9 @@ const OpenLinksButton = styled.button`
   border: none;
   color: #d4dddb;
   font-size: 8vw;
+  margin-left: 50%;
   cursor: pointer;
-  @media (min-width: 700px) {
+  @media (min-width: 480px) {
     display: none;
   }
 `;
@@ -65,7 +76,7 @@ const NavbarExtendedContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 675px) {
+  @media (min-width: 480px) {
     display: none;
   }
 `;

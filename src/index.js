@@ -1,9 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './style.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./style.css";
+import App from "./App";
+import Context from "./context/Blogs";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <App />
+  <Context>
+    <App />
+  </Context>
 );

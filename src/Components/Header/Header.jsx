@@ -20,7 +20,7 @@ const Header = () => {
       <TopHeadingContainer>
         <TopHeading>
           Let’s Take a look as to what the coolest travel
-          <br /> community says about the upcoming travel trends!{" "}
+          <br /> community says about the upcoming travel trends!
         </TopHeading>
       </TopHeadingContainer>
       <SearchBar />
