@@ -12,6 +12,8 @@ import {
   AllTags,
   Tags,
   DateTag,
+  View,
+  Row,
 } from "./SingleCarousel.css";
 
 const responsive = {
@@ -53,17 +55,16 @@ const SingleCarousel = () => {
             index < 10 && (
               <>
                 <Container key={blogs.id}>
-                  <Image alt={blogs.featuredImage.altText} src={blogs.featuredImage.link} />
-                  <P>
-                    Places
-                    <span
-                      style={{
-                        marginLeft: "70vw",
-                      }}
-                    >
+                  <Image
+                    alt={blogs.featuredImage.altText}
+                    src={blogs.featuredImage.link}
+                  />
+                  <Row>
+                    <P>Places</P>
+                    <P>
                       <i className="fa fa-share-nodes"></i>
-                    </span>
-                  </P>
+                    </P>
+                  </Row>
                   <H2>{blogs.title}</H2>
                   <Description>
                     {blogs.meta.description} It’s time to turn the fun quotient
@@ -81,18 +82,12 @@ const SingleCarousel = () => {
                       return <Tags>{tags.name}</Tags>;
                     })}
                   </AllTags>
-                  <DateTag>
-                    {new Date(blogs.date).toDateString()}
-                    <span
-                      style={{
-                        marginLeft: "55vw",
-                        color: "black",
-                        fontSize: "1.5rem"
-                      }}
-                    >
+                  <Row>
+                    <DateTag>{new Date(blogs.date).toDateString()}</DateTag>
+                    <View>
                       <i className="fa fa-eye"></i> 10K viewers
-                    </span>
-                  </DateTag>
+                    </View>
+                  </Row>
                 </Container>
               </>
             )

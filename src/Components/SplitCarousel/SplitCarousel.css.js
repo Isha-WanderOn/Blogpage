@@ -28,7 +28,6 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width:100%;
 `;
 export const Image = styled.img`
   width: 30vw;
@@ -63,3 +62,21 @@ export const Tags = styled.div`
   color: #045d51;
   font-weight: 100;
 `;
+
+export const Row = styled.div`
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+`;
+export const DateTag = styled.p`
+  color: rgba(84, 84, 84, 0.7);
+  font-size: 1.5rem;
+`;
+export const View = styled.p`
+  color: "black";
+  font-size: 1.5rem;
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
+`;
+

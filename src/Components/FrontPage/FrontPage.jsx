@@ -4,6 +4,7 @@ import SingleCarousel from "../Carousel/SingleCarousel";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Heading from "../Headings/Heading";
+import Testimonial from "../Testimonial/Testimonial";
 import SplitCarousel from "../SplitCarousel/SplitCarousel";
 
 const FrontPage = () => {
@@ -14,6 +15,7 @@ const FrontPage = () => {
       <Heading heading='Featured' />
       <SingleCarousel />
       <SplitCarousel heading='Latest' />
+      <Testimonial />
       <Footer />
     </div>
   );

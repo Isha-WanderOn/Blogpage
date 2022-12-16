@@ -11,6 +11,9 @@ import {
   Description,
   AllTags,
   Tags,
+  Row,
+  DateTag,
+  View,
 } from "./SplitCarousel.css";
 
 const responsive = {
@@ -37,7 +40,7 @@ const SplitCarousel = (props) => {
     <>
       <Heading heading={props.heading} />
       <Carousel
-        itemClass="carousel-item-padding-0-px"
+        itemClass='splicarousel-item'
         partialVisible={false}
         draggable={false}
         showDots={true}
@@ -47,14 +50,14 @@ const SplitCarousel = (props) => {
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
-        containerClass="carousel-container"
+        containerClass="splitcarousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
       >
         {Blogs.slice(0, 10).map(
           (blogs, index) =>
             index < 10 && (
-              <div style={{ marginRight: "-10px" }}>
+              <div style={ {}}>
                 <Container key={blogs.id}>
                   <Image
                     alt={blogs.featuredImage.altText}
@@ -68,7 +71,13 @@ const SplitCarousel = (props) => {
                       return <Tags>{tags.name}</Tags>;
                     })}
                   </AllTags>
-                  <P>{new Date(blogs.date).toDateString()}</P>
+                  <Row>
+                    <DateTag>{new Date(blogs.date).toDateString()}</DateTag>
+                    <View>
+                      <i className="fa fa-eye"></i> 10K viewers
+                    </View>
+                  </Row>
+                  
                 </Container>
               </div>
             )

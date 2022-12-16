@@ -4,6 +4,7 @@ export const FootSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5rem;
   @media (max-width: 480px) {
     width: auto;
   }
