@@ -3,6 +3,7 @@ import Heading from "../Headings/Heading";
 import Carousel from "react-multi-carousel";
 import { BlogContext } from "../../context/Blogs";
 import "react-multi-carousel/lib/styles.css";
+
 import {
   Container,
   Image,
@@ -35,12 +36,12 @@ const responsive = {
 };
 const SplitCarousel = (props) => {
   const { Blogs } = useContext(BlogContext);
-  console.log(Blogs);
+ 
   return (
     <>
       <Heading heading={props.heading} />
       <Carousel
-        itemClass='splicarousel-item'
+        itemClass="splicarousel-item"
         partialVisible={false}
         draggable={false}
         showDots={true}
@@ -51,35 +52,35 @@ const SplitCarousel = (props) => {
         customTransition="all .5"
         transitionDuration={500}
         containerClass="splitcarousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
+        removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
       >
-        {Blogs.slice(0, 10).map(
+        {Blogs.slice(10, 15).map(
           (blogs, index) =>
             index < 10 && (
-              <div style={ {}}>
-                <Container key={blogs.id}>
+              <Container key={blogs.id}>
+                <div>
                   <Image
                     alt={blogs.featuredImage.altText}
                     src={blogs.featuredImage.link}
                   />
-                  <P>Places</P>
-                  <H2>{blogs.title}</H2>
-                  <Description>{blogs.meta.description}</Description>
-                  <AllTags>
-                    {Blogs[0].tags.slice(0, 2).map((tags) => {
-                      return <Tags>{tags.name}</Tags>;
-                    })}
-                  </AllTags>
-                  <Row>
-                    <DateTag>{new Date(blogs.date).toDateString()}</DateTag>
-                    <View>
-                      <i className="fa fa-eye"></i> 10K viewers
-                    </View>
-                  </Row>
-                  
-                </Container>
-              </div>
+                </div>
+
+                <P>Places</P>
+                <H2>{blogs.title}</H2>
+                <Description>{blogs.meta.description}</Description>
+                <AllTags>
+                  {Blogs[0].tags.slice(0, 2).map((tags) => {
+                    return <Tags>{tags.name}</Tags>;
+                  })}
+                </AllTags>
+                <Row>
+                  <DateTag>{new Date(blogs.date).toDateString()}</DateTag>
+                  <View>
+                    <i className="fa fa-eye"></i> 10K viewers
+                  </View>
+                </Row>
+              </Container>
             )
         )}
       </Carousel>

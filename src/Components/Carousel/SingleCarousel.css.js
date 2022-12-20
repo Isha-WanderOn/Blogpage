@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Image = styled.img`
   width: 78.03vw;
   height: 80vh;
-  object-fit: fill;
+  object-fit: cover;
   display: flex;
   align-items: center;
 `;
@@ -28,6 +28,7 @@ export const P = styled.p`
 `;
 export const Description = styled.p`
   width: 78.03vw;
+  /* width: 100%; */
   font-weight: 400;
   font-size: 2.5rem;
   line-height: 3.4rem;
@@ -40,6 +41,7 @@ export const Description = styled.p`
 `;
 export const H2 = styled.div`
   width: 78.03vw;
+  /* width: 100%; */
   color: black;
   margin-top: 4rem;
   font-size: 3.5rem;
@@ -58,6 +60,7 @@ export const AllTags = styled.div`
   display: flex;
   flex-direction: "row";
   width: 78.03vw;
+  /* width: 100%; */
   /* height: 2vw; */
   margin-bottom: 1.2rem;
 `;
@@ -79,7 +82,6 @@ export const Tags = styled.p`
   font-weight: 300;
   @media screen {
     font-size: 1.2rem;
-    font-weight: 100;
     padding: 0.2rem 1.2rem;
   }
 `;
@@ -87,6 +89,9 @@ export const Tags = styled.p`
 export const DateTag = styled.p`
   color: rgba(84, 84, 84, 0.7);
   font-size: 1.5rem;
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 export const View = styled.p`
@@ -99,6 +104,7 @@ export const View = styled.p`
 
 export const Row = styled.div`
   width: 78.03vw;
+  /* width: 100%; */
   display: flex;
   justify-content: space-between;
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, BoxDesc, BoxTitle, List, Section2 } from "./About.csss";
+import { Box, BoxDesc, BoxTitle, List, Section2 } from "./About.css";
 
 const About = () => {
   return (

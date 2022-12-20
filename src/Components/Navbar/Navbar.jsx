@@ -12,6 +12,7 @@ import {
 } from "./Navbar.css.js";
 import logo from "../../assets/images/logo.png";
 
+/* Navbar Component */
 const Navbar = () => {
   const [extendNavbar, setExtendNavbar] = useState(false);
 
@@ -21,21 +22,19 @@ const Navbar = () => {
         <LeftContainer>
           <Navbarlogo src={logo} />
         </LeftContainer>
-          <NavbarLinkContainer>
-            <NavbarLink to="/DiwaleSale">Diwale Sale</NavbarLink>
-            <NavbarLink to="/InternationalTrips">
-              International Trips
-            </NavbarLink>
-            <NavbarLink to="/Blogs">Blogs</NavbarLink>
-            <NavbarLink to="/About"> About Us</NavbarLink>
-            <OpenLinksButton
-              onClick={() => {
-                setExtendNavbar((curr) => !curr);
-              }}
-            >
-              {extendNavbar ? <>&#10005;</> : <> &#8801;</>}
-            </OpenLinksButton>
-          </NavbarLinkContainer>
+        <NavbarLinkContainer>
+          <NavbarLink to="/DiwaleSale">Diwale Sale</NavbarLink>
+          <NavbarLink to="/InternationalTrips">International Trips</NavbarLink>
+          <NavbarLink to="/Blogs">Blogs</NavbarLink>
+          <NavbarLink to="/About"> About Us</NavbarLink>
+          <OpenLinksButton
+            onClick={() => {
+              setExtendNavbar((curr) => !curr);
+            }}
+          >
+            {extendNavbar ? <>&#10005;</> : <> &#8801;</>}
+          </OpenLinksButton>
+        </NavbarLinkContainer>
       </NavbarInnerContainer>
       {extendNavbar && (
         <NavbarExtendedContainer>

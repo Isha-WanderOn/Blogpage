@@ -1,10 +1,12 @@
-import React from 'react'
-import {  CaurselHeading } from './Heading.css';
+import React from "react";
+import { CaurselHeading } from "./Heading.css";
 
 const Heading = (props) => {
   return (
-    <CaurselHeading>{props.heading}</CaurselHeading>
-  )
-}
+    <CaurselHeading>
+      {props.heading}
+    </CaurselHeading>
+  );
+};
 
-export default Heading
+export default Heading;

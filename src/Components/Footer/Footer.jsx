@@ -1,12 +1,9 @@
 import React from "react";
 import { Box1, FootSection, Text } from "./Footer.css";
-// import testimonial from '../assets/testimonial.png'
-import About from "../About/About";
+
+
 const Footer = () => {
   return (
-    <>
-      {/* <Tesitmonial src={testimonial} alt='testimonial' /> */}
-      {/* <About /> */}
       <FootSection>
         <Box1>
           <Text>
@@ -39,10 +36,9 @@ const Footer = () => {
         <Box1 contacts>
           <p>hello@wanderon.in</p>
           <p>+91-9870301533</p>
-          <p>wwww.wanderon.in </p>
+          <p>www.wanderon.in </p>
         </Box1>
       </FootSection>
-    </>
   );
 };
 

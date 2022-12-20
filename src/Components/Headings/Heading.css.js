@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const CaurselHeading = styled.h1`
   color: #045d51;
   margin: 100px auto;
+  max-width: 600px;
   text-align: center;
   font-size: 3rem;
-  max-width: 600px;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 2rem;
   &:before {
     content: "";
     display: block;
