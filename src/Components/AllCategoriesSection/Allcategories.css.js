@@ -38,12 +38,11 @@ export const CategoryButton = styled.button`
   height: 7vh;
   padding: 0.25em 1em;
   cursor: pointer;
-  margin-right: 2%;
-  outline: 0.5px solid #045d51;
+  margin-right: ${(props) => (props.margin ? "0" : "2%")};
   border: 1px solid #045d51;
-  border-radius: 12px;
+  border-radius: 5px;
   &:hover {
-    background-color: #034a41;
+    background: #034a41;
     color: white;
   }
   @media (max-width: 480px){

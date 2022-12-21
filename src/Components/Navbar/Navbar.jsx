@@ -13,7 +13,7 @@ import {
 import logo from "../../assets/images/logo.png";
 
 /* Navbar Component */
-const Navbar = () => {
+const Navbar = () => { 
   const [extendNavbar, setExtendNavbar] = useState(false);
 
   return (

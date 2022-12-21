@@ -59,7 +59,7 @@ const NavbarLinkExtended = styled(Link)`
   text-decoration: none;
   margin: 10px;
 `;
-
+ 
 const OpenLinksButton = styled.button`
   width: 1.75vw;
   background: none;

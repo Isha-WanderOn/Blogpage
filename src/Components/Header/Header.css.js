@@ -13,7 +13,7 @@ export const Heading = styled.span`
   left: 45.8vw;
   color: #ffffff;
   font-size: 5rem;
-  font-family: "Comforter";
+  font-family: 'Comforter Brush', cursive;
   font-weight: 400;
   font-style: normal;
   z-index: 1;

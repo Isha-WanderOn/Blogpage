@@ -79,7 +79,6 @@ export const Tags = styled.p`
   overflow: hidden;
   text-overflow: ellipsis;
   color: #045d51;
-  font-weight: 300;
   @media screen {
     font-size: 1.2rem;
     padding: 0.2rem 1.2rem;
@@ -104,7 +103,6 @@ export const View = styled.p`
 
 export const Row = styled.div`
   width: 78.03vw;
-  /* width: 100%; */
   display: flex;
   justify-content: space-between;
 `;
